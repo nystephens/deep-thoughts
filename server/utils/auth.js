@@ -4,7 +4,7 @@ const secret = 'mysecretsshhhhh';
 const expiration = '2h';
 
 module.exports = {
-    signtoken: function({ username, email, _id }) {
+    signToken: function({ username, email, _id }) {
         const payLoad = { username, email, _id };
 
         return jwt.sign({ data: payLoad }, secret, { expiresIn: expiration });
@@ -15,7 +15,7 @@ module.exports = {
         let token = req.body.token || req.query.token || req.headers.authorization;
 
         // separate "Bearer" from "<token value>"
-        if (req,headers.authorization) {
+        if (req.headers.authorization) {
             token = token
                 .split(' ')
                 .pop()
