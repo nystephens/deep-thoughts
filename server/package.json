@@ -1,7 +1,7 @@
 {
   "name": "mern-server",
   "version": "1.0.0",
-  "description": "A social media MERN stack app.",
+  "description": "",
   "main": "server.js",
   "scripts": {
     "start": "node server.js",
@@ -12,7 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "apollo-server-express": "^2.24.0",
+    "apollo-server-express": "^2.12.0",
     "bcrypt": "^4.0.1",
     "express": "^4.17.1",
     "faker": "^4.1.0",
@@ -20,14 +20,6 @@
     "mongoose": "^5.9.9"
   },
   "devDependencies": {
-    "nodemon": "^2.0.7"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/nystephens/deep-thoughts.git"
-  },
-  "bugs": {
-    "url": "https://github.com/nystephens/deep-thoughts/issues"
-  },
-  "homepage": "https://github.com/nystephens/deep-thoughts#readme"
+    "nodemon": "^2.0.3"
+  }
 }
