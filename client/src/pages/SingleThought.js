@@ -20,14 +20,16 @@ const SingleThought = props => {
       <div className="card mb-3">
         <p className="card-header">
           <span style={{ fontWeight: 700 }} className="text-light">
-            Username
+            {thought.username}
           </span>{' '}
-          thought on createdAt
+          thought on {thought.createdAt}
         </p>
         <div className="card-body">
-          <p>Thought Text</p>
+          <p>{thought.thoughtText}</p>
         </div>
       </div>
+
+      {thought.reactionCount > 0 && <ReactionList reactions={thought.reactions} />}
     </div>
   );
 };
