@@ -1,13 +1,15 @@
 import React from 'react';
 import { useQuery } from '@apollo/react-hooks';
-import { QUERY_THOUGHTS } from '../utils/queries';
+import { QUERY_THOUGHTS, QUERY_ME_BASIC } from '../utils/queries';
 import ThoughtList from '../components/ThoughtList';
+import Auth from '../utils/auth';
 
 
 const Home = () => {
   // use useQuery hook to make query request
   const { loading, data } = useQuery(QUERY_THOUGHTS);
   const thoughts = data?.thoughts || [];
+  const loggedIn = Auth.loggedIn();
   console.log(thoughts);
 
   return (
